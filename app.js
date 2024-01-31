@@ -9,11 +9,11 @@ const app=express();
 mongoose.connect(config.mongoURI,{useNewUrlParser: true, useUnifiedTopology:true})
 .then(()=>{
     console.log("Mongo Connected");
-    initial();
+    // initial();
 });
 app.use(express.json());
 app.use('/auth',authRoutes);
-app.use('/user',userRoutes);
+// app.use('/user',userRoutes);
 
 const PORT=process.env.PORT || 3000;
 
